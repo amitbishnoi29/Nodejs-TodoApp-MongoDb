@@ -11,7 +11,7 @@ MongoClient.connect('mongodb://localhost:27017',(err,client)=>{
 
     let db=client.db('TodoApp');
 
-    db.collection('Todos').find({completed:true}).toArray()
+    db.collection('Todos').find().toArray()
     .then((docs)=>{
         console.log(JSON.stringify(docs,undefined,2));
         
