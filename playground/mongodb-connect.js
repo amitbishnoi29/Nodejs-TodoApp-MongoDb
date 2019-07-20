@@ -12,8 +12,8 @@ MongoClient.connect('mongodb://localhost:27017',(err,client)=>{
     let db=client.db('TodoApp');
 
     db.collection('Todos').insertOne({
-        text: 'Something to do',
-        completed:false
+        text: 'Eat food',
+        completed:true
     },(err,result)=>{
         if (err){
            return  console.log('Not inserted');
