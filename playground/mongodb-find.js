@@ -13,9 +13,11 @@ MongoClient.connect('mongodb://localhost:27017',(err,client)=>{
 
     db.collection('Todos').find().toArray()
     .then((docs)=>{
+        
         console.log(JSON.stringify(docs,undefined,2));
         
     },(err)=>{
+        
         console.log(err);
         
     })

@@ -1,7 +1,7 @@
 const MongoClient = require('mongodb').MongoClient;
 
 
-MongoClient.connect('mongodb://localhost:27017',(err,client)=>{
+MongoClient.connect('mongodb://localhost:27017',(err,client) => {
 
     if(err){
        return  console.log('Unable to connect to server');
@@ -15,7 +15,7 @@ MongoClient.connect('mongodb://localhost:27017',(err,client)=>{
         text: 'Eat food',
         completed:true
     },(err,result)=>{
-        if (err){
+        if (err) {
            return  console.log('Not inserted');
         }
         console.log(JSON.stringify(result.ops,undefined,2));

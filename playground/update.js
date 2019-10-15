@@ -1,7 +1,7 @@
 const {MongoClient,ObjectID} = require('mongodb');
 
 
-MongoClient.connect('mongodb://localhost:27017',(err,client)=>{
+MongoClient.connect('mongodb://localhost:27017',(err,client) => {
 
     if(err){
        return  console.log('Unable to connect to server');
@@ -24,7 +24,9 @@ MongoClient.connect('mongodb://localhost:27017',(err,client)=>{
         },
         {
             returnOriginal:false
-        }).then((res)=>{
+        })
+    
+        .then((res)=>{
             console.log(res);
             
         },(err)=>{
